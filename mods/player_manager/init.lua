@@ -221,7 +221,7 @@ core.register_entity("player_manager:npc_builder", {
           vel.y =vel.y + 6
           self.object:set_velocity(vel)
 
-          -- force replanning / new wander target
+          -- force replanning / new wander target  
           self.path = nil
           self.path_index = nil
           self.wander_target = nil
