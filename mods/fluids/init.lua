@@ -19,6 +19,7 @@ core.register_node("fluids:lava", {
     buildable_to = true,     -- allows placement/doesn’t block
     climbable = false,
     diggable = false,
+    light_source = 12,
     groups = { not_in_creative_inventory = 1},
 })
 

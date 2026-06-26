@@ -1,11 +1,22 @@
-core.register_node("default:grass", {
-    description = "Grass Block",
-    tiles = {"grass_block_top.png"}
-})
-core.register_node("default:dirt", {
-    description = "Dirt Block",
-    tiles = {"dirt.png"}
-})
+-- loaded_scripts = {"default.init"}
+-- function require(filename)
+--     local unpacked = filename.unpack(".")
+--     local parts = #unpacked
+--     local modname = "default"
+--     local scriptname = "init"
+--     if parts == 1 then
+--         modname = core.get_current_modname()
+--         unpacked = {modname, unpacked[1]}
+--     else
+--         modname = unpacked[1]
+--     end
+--     scriptname=unpacked[2]
+
+--     local modpath = core.get_modpath(modname)
+--     local scriptfile = modpath .. '/' .. scriptname .. ".lua"
+--     dofile(scriptfile)
+--     table.insert(loaded_scripts, filename)
+-- end
 
 
 core.register_node("default:air", {
@@ -22,25 +33,6 @@ core.register_node("default:air", {
 })
 core.register_alias("air", "default:air")
 
-
-core.register_node("default:oak_log", {
-    description = "Oak Log",
-    tiles = {
-        "oak_log_top.png", -- Top
-        "oak_log_top.png", -- Bottom
-        "oak_log.png", -- Right
-        "oak_log.png", -- Left
-        "oak_log.png", -- Back
-        "oak_log.png" -- Front
-    }
-})
-core.register_node("default:oak_planks", {
-    description = "Oak Planks",
-    tiles = {
-        "oak_planks.png"
-    }
-})
-
 core.register_node("default:lamp", {
     paramtype = "light",
     paramtype2="none",
@@ -55,8 +47,6 @@ core.register_node("default:lamp", {
 })
 core.register_alias("default:redstone_torch", "default:lamp")
 
-core.register_alias("default:purple_checker", "default:dirt")
-core.register_alias("default:black_checker", "default:dirt")
 
 core.register_craft({
     type = "shapeless",
@@ -66,11 +56,7 @@ core.register_craft({
     }
 })
 
-core.register_craft({
-    type = "shapeless",
-    output = "default:oak_planks 4",
-    recipe = {"default:oak_log"}
-})
+
 
 
 core.register_on_punchnode(function(pos, node, puncher, pointed_thing)
