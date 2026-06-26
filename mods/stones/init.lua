@@ -10,6 +10,11 @@ core.register_node("stones:obsidian", {
     description = "Obsidian",
     tiles = {"obsidian.png"}
 })
+core.register_node("stones:bedrock", {
+    description = "Bedrock",
+    tiles = {"bedrock.png"},
+    groups = {unbreakable = 1}
+})
 
 core.register_alias("default:checker", "stones:stone")
 core.register_alias("default:stone", "stones:stone")

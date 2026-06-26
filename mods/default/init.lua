@@ -37,7 +37,7 @@ core.register_node("default:lamp", {
     paramtype = "light",
     paramtype2="none",
     description = "Lamp (on)",
-    walkable = false,
+    walkable = true,
     sunlight_propagates = true,
 
     light_source = 12, 

@@ -2,6 +2,7 @@ core.register_node("fluids:water", {
     description = "Water (yes, I know it should spill, but I'll get to that soon)",
     tiles = {"water.png"},
     drawtype = "liquid",
+    paramtype = "light",
     sunlight_propagates = true,
     walkable = false,
     pointable = false,
@@ -14,6 +15,7 @@ core.register_node("fluids:lava", {
     description = "Lava (yes, I know it should extremely burn, but I'll get to that soon)",
     tiles = {"lava.png"},
     drawtype = "liquid",
+    paramtype = "light",
     walkable = false,
     pointable = false,
     buildable_to = true,     -- allows placement/doesn’t block
